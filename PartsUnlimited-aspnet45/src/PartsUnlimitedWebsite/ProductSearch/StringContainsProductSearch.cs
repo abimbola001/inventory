@@ -46,7 +46,7 @@ namespace PartsUnlimited.ProductSearch
 			}
 			else if (query.EndsWith("s"))
 			{
-				query = query.Substring(1, query.Length);
+				query = query.Substring(0, query.Length - 1);
 			}
 			return query.ToLowerInvariant();
 		}
