@@ -36,18 +36,19 @@ namespace PartsUnlimited.ProductSearch
 
 		public string Depluralize(string query)
 		{
-			if (query.EndsWith("ies"))
-			{
-				query = query.Substring(0, query.Length - 3) + "y";
-			}
-			else if (query.EndsWith("es"))
-			{
-				query = query.Substring(0, query.Length - 1);
-			}
-			else if (query.EndsWith("s"))
-			{
-				query = query.Substring(0, query.Length - 1);
-			}
+            if (string.IsNullOrEmpty(query)) return "";
+            else if (query.EndsWith("ies"))
+            {
+                query = query.Substring(0, query.Length - 3) + "y";
+            }
+            else if (query.EndsWith("es"))
+            {
+                query = query.Substring(0, query.Length - 1);
+            }
+            else if (query.EndsWith("s"))
+            {
+                query = query.Substring(0, query.Length - 1);
+            }
 			return query.ToLowerInvariant();
 		}
 	}
