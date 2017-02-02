@@ -65,10 +65,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="..\..\PartsUnlimited.DepValidation\DependencyValidation1.layerdiagram">
-      <Link>DependencyValidation1.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
