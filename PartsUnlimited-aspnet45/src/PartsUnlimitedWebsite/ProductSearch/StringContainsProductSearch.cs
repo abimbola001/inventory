@@ -24,7 +24,7 @@ namespace PartsUnlimited.ProductSearch
 				var cleanQuery = Depluralize(query);
 
 				var q = _context.Products
-					.Where(p => p.Title.ToLower().Contains(cleanQuery));
+					.Where(p => p.Title.Contains(cleanQuery));
 
 				return await q.ToListAsync();
 			}
